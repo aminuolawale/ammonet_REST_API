@@ -1,0 +1,94 @@
+GET http://localhost:5000/api
+###
+//get all users
+GET http://localhost:5000/api/users
+###
+//create user
+POST http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+    "username": "Wawind",
+    "fullName": "Aminu Halimat",
+    "password": "aspolos"
+}
+###
+//get a user
+GET http://localhost:5000/api/user/5d73dd818febe201d9c8db97e
+###
+//update user
+PUT  http://localhost:5000/api/user/5d73d818febe201d9c8db97e
+Content-Type: application/json
+
+{
+    "fullName": "Podpos Paro"
+}
+###
+//delete user
+DELETE   http://localhost:5000/api/user/5d76438cf1e02b22845e3bcc
+
+###
+//get all posts
+GET  http://localhost:5000/api/posts
+###
+//create post
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+
+{
+    "text": "This is Halimats 1st post",
+    "title": "Halimats 1st post",
+    "userId": "5d76438cf1e02b22845e3bcc"
+}
+###
+//edit a post
+PUT  http://localhost:5000/api/post/5d73e2850ba1c411083e5478
+Content-Type: application/json
+
+{   "title": "Aminu's first post",
+    "text": "This is the first post",
+    "userId":"5d73d7c2febe201d9c8db97d"
+}
+###
+//delete a post
+DELETE  http://localhost:5000/api/post/5d7438775e193b1b2c0e434a
+Content-Type: application/json
+
+{
+    "userId": "5d7437369b27dc16fcd3d1c9"
+}
+
+### 
+//like a post
+PUT  http://localhost:5000/api/like/5d7643aef1e02b22845e3bcd
+Content-Type: application/json
+
+{
+    "userId": "5d76437ef1e02b22845e3bcb"
+}
+###
+//create comment
+POST http://localhost:5000/api/comment/5d7643aef1e02b22845e3bcd
+Content-Type: application/json
+
+{
+    "userId":"5d76437ef1e02b22845e3bcb",
+    "text":"Nicereeeee post"
+}
+###
+//edit comment
+PUT  http://localhost:5000/api/comment/5d75044ce6f8cc11e45c6181
+Content-Type: application/json
+
+{
+    "userId":"5d75042ae6f8cc11e45c617f",
+    "text":"Nice post"
+}
+###
+//delete comment
+PUT    http://localhost:5000/api/comment/delete/5d76460523aeca0e80b454dc
+Content-Type: application/json
+
+{
+    "postId":"5d7643aef1e02b22845e3bcd"
+}

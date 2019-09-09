@@ -26,6 +26,6 @@ router.post('/comment/:id',commentController.create);
 router.put('/comment/:id',commentController.edit);
 router.put('/comment/delete/:id',commentController.delete);
 //put instead of delete because the request body will 
-//contain postId so that the commentsCount is updated
+//contain postId so that the commentsCount is updatedg
 
 module.exports=router;

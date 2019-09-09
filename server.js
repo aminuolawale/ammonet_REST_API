@@ -4,7 +4,8 @@ const mongoose = require('mongoose');
 
 const server = express();
 
-mongoose.connect(process.env.DB_URI,{useNewUrlParser:true}).
+const db_uri=process.env.DB_URI || 'mongodb://localhost/ammonet'
+mongoose.connect(db_uri,{useNewUrlParser:true}).
 then(()=>console.log('connected to database'))
 .catch(err=>console.log(err));
 

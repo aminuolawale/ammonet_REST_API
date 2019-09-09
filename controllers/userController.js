@@ -105,7 +105,7 @@ userController.delete = (req,res)=>{
     //delete all users comments
     db.Comment.deleteMany({"_creator":req.params.id}).then()
     .catch(err=>console.log(err));
-    //whats left is to update postcounts on all posts commented on by user
+    //whats left is to update commentcounts on all posts commented on by user
 }
 
 

@@ -3,7 +3,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 const server = express();
-mongoose.connect(process.env.DB_URI,{useNewUrlParser:true}).then(()=>console.log('connected to database'))
+
+mongoose.connect(process.env.DB_URI,{useNewUrlParser:true}).
+then(()=>console.log('connected to database'))
 .catch(err=>console.log(err));
 
 server.use(express.json());

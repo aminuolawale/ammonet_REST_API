@@ -38,24 +38,24 @@ Content-Type: application/json
 {
     "text": "This is Halimats 1st post",
     "title": "Halimats 1st post",
-    "userId": "5d76438cf1e02b22845e3bcc"
+    "userId": "5d764bc93ae84a1d5ccb64d4"
 }
 ###
 //edit a post
-PUT  http://localhost:5000/api/post/5d73e2850ba1c411083e5478
+PUT  http://localhost:5000/api/post/5d764bd73ae84a1d5ccb64d5
 Content-Type: application/json
 
 {   "title": "Aminu's first post",
     "text": "This is the first post",
-    "userId":"5d73d7c2febe201d9c8db97d"
+    "userId":"5d764bc93ae84a1d5ccb64d4"
 }
 ###
 //delete a post
-DELETE  http://localhost:5000/api/post/5d7438775e193b1b2c0e434a
+DELETE  http://localhost:5000/api/post/5d764bd73ae84a1d5ccb64d5
 Content-Type: application/json
 
 {
-    "userId": "5d7437369b27dc16fcd3d1c9"
+    "userId": "5d764bc93ae84a1d5ccb64d4"
 }
 
 ### 

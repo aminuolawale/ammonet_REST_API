@@ -3,6 +3,7 @@ const basicController= require('../../controllers/basicController');
 const userController = require('../../controllers/userController');
 const postController = require('../../controllers/postController');
 const commentController = require('../../controllers/commentController');
+
 //base route
 router.get('/',basicController.get);
 
@@ -24,5 +25,7 @@ router.put('/like/:id',postController.like);
 router.post('/comment/:id',commentController.create);
 router.put('/comment/:id',commentController.edit);
 router.put('/comment/delete/:id',commentController.delete);
+//put instead of delete because the request body will 
+//contain postId so that the commentsCount is updated
 
 module.exports=router;
